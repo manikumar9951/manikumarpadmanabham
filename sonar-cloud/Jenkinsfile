@@ -8,8 +8,6 @@ pipeline{
         SONAR_ORGANIZATION="manikumar9951"
     }
     
-
-    
     stages{
         stage('scm'){
             steps{
