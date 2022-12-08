@@ -1,0 +1,24 @@
+pipeline{
+    agent {label 'master'}
+    stages{
+        stage('Checkout from github'){
+            steps{
+                git branch: 'main', 
+                credentialsId: 'github', 
+                url: 'https://github.com/manikumar9951/manikumarpadmanabham'
+            }
+        }
+        stage('Maven-Build'){
+            steps{
+                sh 'mvn clean install'
+            }
+        }
+        stage('Apache-Deploy'){
+            steps{
+               ansiblePlaybook credentialsId: 'ec2-user', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'Inventory', playbook: 'apache-deploy.yml'
+            }
+        }
+        
+    }
+}
+
