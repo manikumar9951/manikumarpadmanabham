@@ -2,10 +2,6 @@ pipeline{
     agent any
     environment {
         PATH = "$PATH:/usr/share/apache-maven/bin"
-        SONAR_HOST_URL="sonarcloud.io"
-        SONAR_AUTH_TOKEN="36ab93b39c821e27af1ca299c002135fd6c9f8a0"
-        //SONAR_HOST_URL="https://sonarcloud.io"
-        SONAR_ORGANIZATION="manikumar9951"
     }
     
     stages{
