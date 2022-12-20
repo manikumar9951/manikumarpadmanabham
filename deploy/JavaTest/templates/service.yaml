@@ -5,7 +5,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: javatest
+    app: demo
   ports:
     - protocol: {{ .Values.service.protocol }}
       port: {{ .Values.service.port }}

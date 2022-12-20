@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: javatest
+  name: demo
   labels:
-    app: javatest
+    app: demo
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: javatest
+      app: demo
   template:
     metadata:
       labels:
-        app: javatest
+        app: demo
     spec:
       containers:
       - name: {{ .Values.image.name}}

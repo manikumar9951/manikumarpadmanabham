@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   name: docker-container
-  repository: 513704694763.dkr.ecr.us-west-2.amazonaws.com/docker-container:latest
+  repository: 513704694763.dkr.ecr.us-west-2.amazonaws.com/docker-container:Helloworld-21
   pullPolicy: IfNotPresent
 
 
