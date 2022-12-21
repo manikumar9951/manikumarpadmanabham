@@ -62,6 +62,7 @@ pipeline{
                     cd /home/ansible
                     /usr/local/bin/helm install demotest demo
                     /usr/local/bin/helm list -a
+                    sleep 300
                     /root/bin/kubectl get pods
                     /root/bin/kubectl get services
                     '''
