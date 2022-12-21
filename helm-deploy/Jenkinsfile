@@ -60,9 +60,8 @@ pipeline{
                 script{
                     sh '''
                     cd /home/ansible
-                    /usr/local/bin/helm install demotest demo --set image.tag=Helloworld-${DOCKER_TAG}
+                    /usr/local/bin/helm install demotest demo --set image.tag=Helloworld-${DOCKER_TAG} --debug --wait
                     /usr/local/bin/helm list -a
-                    sleep 300
                     /root/bin/kubectl get pods
                     /root/bin/kubectl get services
                     '''
